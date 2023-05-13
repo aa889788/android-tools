@@ -16,7 +16,6 @@
 #ifndef ANDROID_INCLUDE_HARDWARE_QEMU_PIPE_H
 #define ANDROID_INCLUDE_HARDWARE_QEMU_PIPE_H
 
-#include <sys/cdefs.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/mman.h>

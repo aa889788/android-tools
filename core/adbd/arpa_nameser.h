@@ -58,7 +58,6 @@
 #define BIND_4_COMPAT
 
 #include <sys/types.h>
-#include <sys/cdefs.h>
 
 /*
  * Revision information.  This is the release date in YYYYMMDD format.
@@ -507,7 +506,9 @@ typedef enum __ns_cert_types {
 #define	ns_makecanon		__ns_makecanon
 #define	ns_samename		__ns_samename
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif
 int		ns_msg_getflag(ns_msg, int);
 uint16_t	ns_get16(const u_char *);
 uint32_t	ns_get32(const u_char *);
@@ -562,7 +563,9 @@ int		ns_samedomain(const char *, const char *);
 int		ns_subdomain(const char *, const char *);
 int		ns_makecanon(const char *, char *, size_t);
 int		ns_samename(const char *, const char *);
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif
 
 #ifdef BIND_4_COMPAT
 #include "arpa_nameser_compat.h"
